@@ -68,8 +68,7 @@ with st.sidebar:
     st.header("Fuente sonora")
     Lw = st.slider("Nivel de potencia sonora Lw (dB)", 50, 150, 90)
     r  = st.slider("Distancia fuente–receptor r (m)", 0.5, 20.0, 2.0, step=0.5)
-    Q  = st.selectbox("Factor de directividad Q", [1, 2, 4], index=1,
-                      format_func=lambda x: {1:"1 — esfera completa", 2:"2 — semiesfera", 4:"4 — cuarto de esfera"}[x])
+    Q  = 2  # semiesfera (fuente sobre superficie)
 
 # ── Cálculos principales ─────────────────────────────────────────────────────
 V        = largo * ancho * alto
